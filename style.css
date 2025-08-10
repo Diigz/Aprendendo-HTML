@@ -240,3 +240,107 @@ header nav ul li:hover::after {
   top: 20%;
   left: 70%;
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .arrows,
+  .arrow-btn {
+    display: none !important;
+  }
+
+  .content {
+    width: 50%;
+    padding-right: 2rem;
+  }
+
+  .product-name {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  header nav ul {
+    gap: 1.5rem;
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 6rem;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    width: 90%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .product-name {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    max-width: 90%;
+    margin-left: 5px;
+  }
+
+  .arrows {
+    top: auto;
+    bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .arrows,
+  .arrow-btn {
+    display: none !important;
+  }
+
+  header nav ul {
+    display: none; /* pode trocar por menu hambúrguer futuramente */
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-left: 5px;
+  }
+
+  .btn {
+    position: fixed;
+    bottom: 18px; /* distância do fundo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px); /* margem lateral */
+    max-width: 360px; /* evita ficar enorme em telas maiores */
+    padding: 0.9rem 1rem;
+    border-radius: 28px;
+    z-index: 999; /* na frente de tudo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .circle {
+    display: none; /* remove elementos decorativos para ganhar espaço */
+  }
+}
